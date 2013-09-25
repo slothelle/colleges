@@ -14,11 +14,9 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
-
+require 'money'
 require 'sinatra'
 require "sinatra/reloader" if development?
-require 'bcrypt'
-require 'erb'
 require 'slim'
 require 'sass'
 

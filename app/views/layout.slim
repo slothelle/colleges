@@ -1,13 +1,14 @@
 doctype html
 html
   head
-    title feministy.com - #{@title}
+    title animal house - #{@title}
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     link rel="stylesheet" href="/css/bootstrap.css"
     link rel="stylesheet" href="/css/bootstrap-responsive.css"
     link rel="stylesheet" href="/css/sesamo.css"
     script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
     script src="/js/bootstrap.js"
+    script src="/js/app.js"
   <style>body { padding-top: 60px; padding-bottom: 60px; }</style>
   body
     .container-fluid
@@ -15,55 +16,11 @@ html
         .span2
           / Nav menu
           .page-header
-            h4 feministy.com <br><small>home of knitwear designer Liz Abinante</small>
-          h5 Hello!
+            h4 animal house <br><small>learn everything you ever wanted to know about a college before dropping untold thousands getting a degree there</small>
           ul.nav.nav-list
-            li.nav-header Important Stuff
-            li <a href="about/liz">About Liz</a>
-            li <a href="blog">Blog</a>
-            li <a href="http://www.ravelry.com/stores/feministy">Ravelry Store</a>
-            li <a href="http://twitter.com/feministy">Twitter @feministy</a>
-            li <a href="about/api">Using the Ravelry API to build a website</a>
-          hr
-          h5 Patterns by Collection
-          ul.nav.nav-list
-            li.nav-header Collections
-            li <a href="collection/traveling-woman">Traveling Woman</a>
-            li <a href="collection/fairy-tales-saga">Fairy Tales Saga</a>
-            li <a href="collection/arch-shawls">Arch Shawls</a>
-            li <a href="collection/great-cowl-kal-2012">Great Cowl KAL 2012</a>
-            li <a href="collection/funke-socks">Funke Socks</a>
-          hr
-          h5 Patterns by Category
-          ul.nav.nav-list
-            li.nav-header Shawls, Cowls, and Wraps
-            - Pattern.shawls.sort_by(&:name).each do |pattern|
-              li <a href="pattern/#{pattern.ravelry_permalink}">#{pattern.name}</a>
-          hr
-          ul.nav.nav-list
-            li.nav-header Scarves
-            - Pattern.scarves.sort_by(&:name).each do |pattern|
-              li <a href="pattern/#{pattern.ravelry_permalink}">#{pattern.name}</a>
-          hr
-          ul.nav.nav-list
-            li.nav-header Hats
-            - Pattern.hats.sort_by(&:name).each do |pattern|
-              li <a href="pattern/#{pattern.ravelry_permalink}">#{pattern.name}</a>
-          hr
-          ul.nav.nav-list
-            li.nav-header Socks
-            - Pattern.socks.sort_by(&:name).each do |pattern|
-              li <a href="pattern/#{pattern.ravelry_permalink}">#{pattern.name}</a>
-          hr
-          ul.nav.nav-list
-            li.nav-header Cardigans
-            - Pattern.cardigans.sort_by(&:name).each do |pattern|
-              li <a href="pattern/#{pattern.ravelry_permalink}">#{pattern.name}</a>
-          hr
-          ul.nav.nav-list
-            li.nav-header Kids
-            - Pattern.child.sort_by(&:name).each do |pattern|
-              li <a href="pattern/#{pattern.ravelry_permalink}">#{pattern.name}</a>
+            li.nav-header browse colleges by
+            li <a href="/states/all" class="menu">State</a>
+            li <a href="/religions/all" class="menu">Religious affiliation</a>
         .span9
           == yield
         .span1

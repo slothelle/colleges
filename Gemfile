@@ -11,6 +11,7 @@ gem 'sinatra-contrib'
 gem 'thin'
 
 gem 'activesupport'
+gem 'money'
 gem 'activerecord'
 gem 'bcrypt-ruby'
 gem 'rake'

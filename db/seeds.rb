@@ -1,6 +1,6 @@
 require 'csv'
 
-CSV.foreach('condensed.csv', :headers => true, :header_converters => :symbol, :converters => :all) do |row|
+CSV.foreach('db/condensed.csv', :headers => true, :header_converters => :symbol, :converters => :all) do |row|
   school = Hash[row]
   result = School.create!(school)
   puts result
