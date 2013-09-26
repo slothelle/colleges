@@ -6,6 +6,11 @@ get '/' do
   slim :index
 end
 
+get '/fancy/:name' do
+  @schools = School.find_all_by_state(params[:name])
+  slim :d3
+end
+
 get '/states/all' do
   slim :states, layout: false
 end
