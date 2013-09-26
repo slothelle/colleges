@@ -2,4 +2,5 @@ h3 Did you know that the most expensive school in the United States is in #{@exp
 
 h3 By comparison, the least expensive (not free) school in the United States is in #{@cheap.state}.<br><small>#{@cheap.name} only costs $#{Stats::number_with_delimiter(@cheap.fees12)} a year and is #{@cheap.affiliation}.</small>
 
-p There are #{School::RELIGIONS.count} different religious affiliations, including #{School::RELIGIONS.sample(2).join(" and ")}.
+- random = School.random_religion
+h3 There are #{School.num_religions} different religious affiliations among colleges.<br><small>Including <a href="/religions/#{random}">#{random}</a>.</small>
