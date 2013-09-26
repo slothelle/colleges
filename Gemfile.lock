@@ -14,15 +14,12 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     backports (2.6.1)
-    bcrypt-ruby (3.0.1)
     builder (3.0.4)
     daemons (1.1.9)
     eventmachine (1.0.0)
     faker (1.1.2)
       i18n (~> 0.5)
     i18n (0.6.1)
-    money (5.1.1)
-      i18n (~> 0.6.0)
     multi_json (1.6.1)
     pg (0.14.1)
     rack (1.5.2)
@@ -62,9 +59,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   activesupport
-  bcrypt-ruby
   faker
-  money
   pg
   rake
   sass
